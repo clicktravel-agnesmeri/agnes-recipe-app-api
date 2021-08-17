@@ -1,0 +1,4 @@
+to start with set up the files and run these in the root folder of the project
+docker build .
+docker-compose build
+docker-compose run app sh -c "django-admin.py startproject app ."
