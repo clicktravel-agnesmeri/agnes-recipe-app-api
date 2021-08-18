@@ -1,4 +1,14 @@
-to start with set up the files and run these in the root folder of the project
+to start set up the files and run these in the root folder of the project
 docker build .
 docker-compose build
 docker-compose run app sh -c "django-admin.py startproject app ."
+
+run tests (if error: run the docker-compose build command again)
+docker-compose run app sh -c "python manage.py test && flake8"
+
+create core app within project
+docker-compose run app sh -c "python manage.py startapp core"
+
+database migrations and creates a db for our model to use (set up the database)
+Run this every time after you change the model
+docker-compose run app sh -c "python manage.py makemigrations core"
