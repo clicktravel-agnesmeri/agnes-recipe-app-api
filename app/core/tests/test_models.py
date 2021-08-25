@@ -3,9 +3,6 @@ from django.contrib.auth import get_user_model
 
 
 class ModelTests(TestCase):
-    def test_true_is_ture(self):
-
-        self.assertEqual(True, True)
 
     def test_create_user_with_email_successful(self):
         """Test creating a new user with an email is successful"""
